@@ -541,3 +541,477 @@ typeof(x)
 - **データフレーム**はベクトルからなっている
 
 - **ベクトル**は一つの型しか持てない
+
+# データ解析
+
+## 生データ
+
+- まず、グーグルドライブから`屋上はらっぱ植生調査.csv`（生データ）をダウンロードして、`data/`に置いて下さい
+
+- 「生データ」とは収集された元のデータであり、**読み込み専用**で扱う。
+  - データの整合性を保持し、誤改変を防ぐためである。
+
+- コード以外のツールで編集すると、変更履歴が残らず、データの再現性や透明性が損なわれる。
+
+## tidyなデータ
+
+- 各列が変数を表している
+- 各行が観察を表している
+- 各セルが一つの値を表している
+
+![](https://r4ds.hadley.nz/images/tidy-1.png)
+
+## tidyなデータ
+
+```{r}
+#| echo: false
+read_csv("data/students.csv")
+```
+
+## データの読み込み
+
+- 必要なパッケージをロードする
+
+- このコードを`roof-survey.R`として保存
+
+```{r}
+#| eval: false
+#| filename: roof-survey.R
+library(tidyverse)
+```
+
+## データの読み込み
+
+```{r}
+read_csv("data/屋上はらっぱ植生調査 - とりまとめ.csv")
+```
+
+うまく行かない・・
+
+## データの読み込み
+
+- `read_csv()`関数の使い方を`?read_csv`で確認する
+  - `?read_csv`はデータ解析に必要ではないコマンドなので、`roof-survey.R`に書かないで、直接コンソール（下の方のパネル）に入力
+
+```{r}
+#| eval: false
+?read_csv
+```
+
+## データの読み込み
+
+- `read_csv()`の主な引数（設定）
+  - `file`：読み込むファイル名（場所）
+  - `skip`：データを読み込み始めるまで最初に**読まない**（スキップ）する行の数
+  - `n_max`：何行まで読み込む
+
+## データの読み込み
+
+```{r}
+read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 3,
+  n_max = 22
+)
+```
+
+## 列名を指定する
+
+- 列名は日本語のままだとコードでは扱いづらい
+  - そもそも一列目は名前がない
+
+- 列名を指定しましょう
+
+---
+
+```{r}
+read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 3,
+  n_max = 22,
+  col_names = c(
+    "quadrat", "name_ja", "name_en",
+    "cover", "abun", "pop")
+)
+```
+
+## 列名を指定する
+
+- `quadrat`をもうちょっとよく見て下さい。どんなデータが入っている？
+
+- `A-1`
+  - `A`：プロット名
+  - `1`: その中のクアドラット（quadrat）
+
+- これをちゃんと分けましょう
+
+---
+
+- `separate_wider_delim()`を使う 
+  - `separate`：分離させる
+  - `wider`：より広く
+  - `delim`：何かの記号を境目に
+
+---
+
+```{r}
+read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 4,
+  n_max = 22,
+  col_names = c(
+    "quadrat", "name_ja", "name_en",
+    "cover", "abun", "pop")
+  ) |>
+  separate_wider_delim(
+    quadrat, delim = "-", names = c("plot", "quadrat"))
+```
+
+---
+
+## 列名を指定する
+
+- これではまだ１区分しか読んでいない。他も同様に読み込む必要がある。
+
+- 自分で出来ますか？やってみて下さい。
+
+```{r}
+okujo_a <- read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 4,
+  n_max = 22,
+  col_names = c(
+    "quadrat", "name_ja", "name_en",
+    "cover", "abun", "pop")
+  ) |>
+  separate_wider_delim(
+    quadrat, delim = "-", names = c("plot", "quadrat"))
+```
+
+---
+
+```{r}
+okujo_b <- read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 38,
+  n_max = 16,
+  col_names = c(
+    "quadrat", "name_ja", "name_en",
+    "cover", "abun", "pop"),
+  col_types = "cccnnn"
+  ) |>
+  separate_wider_delim(
+    quadrat, delim = "-", names = c("plot", "quadrat"))
+```
+
+---
+
+```{r}
+okujo_c <- read_csv(
+  "data/屋上はらっぱ植生調査 - とりまとめ.csv",
+  skip = 59,
+  n_max = 16,
+  col_names = c(
+    "quadrat", "name_ja", "name_en",
+    "cover", "abun", "pop"),
+  col_types = "cccnnn"
+  ) |>
+  separate_wider_delim(
+    quadrat, delim = "-", names = c("plot", "quadrat"))
+```
+
+## データの整理
+
+- 最後に、データを一つにまとめましょう
+  - これで、やっと可視化（解析）できる段階に入った
+
+```{r}
+okujo <- bind_rows(okujo_a, okujo_b, okujo_c)
+okujo <- read_csv("data/matome_clean.csv", col_types = "cccnnn")
+```
+
+## ggplot2について
+
+- Rには備え付けの関数、`plot()`があるが、今回は`tidyverse`の`ggplot2`パッケージを使う
+
+- `gg` = "**G**rammar of **G**raphics"（画像の文法）
+  - 「文法」が分かれば、（ほとんど）<br>どんな図でも作れる
+
+## ggplot2について
+
+図の構造にはいくつか**決まった要素**がある
+
+- **geometry**: 図はどのような**形**にする？
+
+- **aesthetics**: データをどのように図に**表す**？
+
+## Geometry
+
+:::: {.columns}
+
+::: {.column width="50%"}
+Pie chart
+<br><br>
+<img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-pie-1.png" alt="drawing" height="220">
+:::
+
+::: {.column width="50%"}
+Bar graph
+<br><br>
+<img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-bars-1.png" alt="drawing" height="220">
+:::
+
+::::
+
+:::: {.aside}
+::: {.small}
+https://clauswilke.com/dataviz/proportional-ink.html
+:::
+::::
+
+## Aesthetics
+
+<img src="https://clauswilke.com/dataviz/aesthetic_mapping_files/figure-html/common-aesthetics-1.png" alt="drawing" height="250">
+
+:::: {.aside}
+::: {.small}
+https://clauswilke.com/dataviz/aesthetic-mapping.html
+:::
+::::
+
+## 目的：このグラフを作る
+
+```{r}
+#| echo: false
+ggplot(okujo, aes(x = plot, y = cover, color = plot)) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  ) +
+  theme(legend.position = "none")
+```
+
+## `ggplot()`でグラフの基盤を作る
+
+```{r}
+#| output-location: column
+ggplot(data = okujo)
+```
+
+## `mapping()`で座標を指定する
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover
+  )
+)
+```
+
+## `mapping()`で座標を指定する
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "3-6"
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover
+  )
+)
+```
+
+## `geom_()`でデータの形を指定する
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover
+  )
+) +
+  geom_boxplot()
+```
+
+## `geom_()`でデータの形を指定する
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "7-8"
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover
+  )
+) +
+  geom_boxplot()
+```
+
+## チャレンジ
+
+`name_en`を横軸、`cover`を縦軸にして、箱ひげ図を作成して下さい
+
+## `color`で色を潰す
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot()
+```
+
+## `color`で色を潰す
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "6"
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot()
+```
+
+## 平均だけを見せるのでいい？
+
+- グラフを作る際、平均だけを見せても大丈夫でしょうか？議論して下さい。
+
+## 平均だけでは足りない
+
+![](https://www.research.autodesk.com/app/uploads/2023/03/AllDinos-2.png)
+
+::: {.aside}
+<https://www.research.autodesk.com/publications/same-stats-different-graphs/>
+:::
+
+## 生データを付け加える
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot() +
+  geom_point()
+```
+
+## 生データを付け加える
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "10"
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot() +
+  geom_point()
+```
+
+## 点が重なってしまう問題
+
+- 英語で「overplotting」という
+
+- 解決策：**グループ内**で適当にばらける
+  - `geom_jitter()`
+  - `jitter` = 「揺らぐ」、「ばらつく」
+
+## 点が重なってしまう問題を`geom_jitter()`で解決
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot() +
+  geom_jitter()
+```
+
+## 点が重なってしまう問題を`geom_jitter()`で解決
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "10"
+ggplot(
+  data = okujo,
+  mapping = aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot() +
+  geom_jitter()
+```
+
+## `labs()`でラベルをきれいにする
+
+```{r}
+#| output-location: column
+ggplot(
+  data = okujo,
+  mapping = aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  )
+```
+
+## `labs()`でラベルをきれいにする
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "7-12"
+ggplot(
+  data = okujo,
+  mapping = aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  )
+```
