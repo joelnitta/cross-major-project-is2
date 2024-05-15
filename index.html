@@ -8,7 +8,7 @@
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <title>index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,7 +30,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -221,7 +221,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -394,7 +395,7 @@
 <section id="rとrstudio入門" class="title-slide slide level1 center">
 <h1>RとRStudio入門</h1>
 <p>オンデマンド</p>
-<p><a href="https://joelnitta.github.io/cross-major-project-is2/" class="uri">https://joelnitta.github.io/cross-major-project-is2/</a></p>
+<p><a href="https://joelnitta.github.io/cross-major-project-is2/#/データ解析" class="uri">https://joelnitta.github.io/cross-major-project-is2/#/データ解析</a></p>
 </section>
 <section id="再現性とは" class="slide level2">
 <h2>再現性とは？</h2>
@@ -493,7 +494,7 @@
 </ul>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 40</code></pre>
 </div>
@@ -508,7 +509,7 @@
 </ul>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>age <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>age <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">*</span> <span class="dv">20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -518,7 +519,7 @@
 <p>変数の内容を確認するには、コンソールにその変数の名前を打てば良い：</p>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a>age</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 40</code></pre>
 </div>
@@ -544,7 +545,7 @@
 <p>例えば</p>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">round</span>(<span class="fl">3.1415</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">round</span>(<span class="fl">3.1415</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.1</code></pre>
 </div>
@@ -556,7 +557,7 @@
 <p>関数の使い方を確認したい時は<code>?関数名</code>と打って、ヘルプファイルを参照すれば良い</p>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>?round</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a>?round</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -573,7 +574,7 @@
 <h2>パッケージのインストール</h2>
 <p>Rパッケージのインストールを行うには、<code>install.packages()</code>を使う：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>一回インストールしたら、次回からはしなくて良いので、これはコードとして保存しない</p>
 </section>
@@ -589,7 +590,7 @@
 <p><code>library()</code>関数でロードする：</p>
 <div class="large">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -606,7 +607,7 @@
 </ul>
 <p>これからよく使うので、インストールしましょう。一気に出来るから、楽。</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="install.packagesとlibraryの違い" class="slide level2">
@@ -692,10 +693,10 @@
 <section id="スクリプトからコードを使う" class="slide level2">
 <h2>スクリプトからコードを使う</h2>
 <p>以下のコードをスクリプトに書いて、<code>script.R</code>としてデスクトップに保存しましょう（コードの詳細はまた後で学ぶ）。</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">geom_hex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a href=""></a></span>
+<span id="cb12-3"><a href=""></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
+<span id="cb12-4"><a href=""></a>  <span class="fu">geom_hex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="スクリプトからコードを使う-1" class="slide level2">
 <h2>スクリプトからコードを使う</h2>
@@ -713,12 +714,12 @@
 <h2>プロジェクトにスクリプトを置きましょう</h2>
 <p>以下のコードを書いて、スクリプトを<code>diamonds.R</code>として<code>green-roof</code>プロジェクトに保存して、実行しましょう：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-2"><a href="#cb13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">geom_hex</span>()</span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-6"><a href="#cb13-6"></a><span class="fu">ggsave</span>(<span class="st">"diamonds.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-2"><a href=""></a></span>
+<span id="cb13-3"><a href=""></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
+<span id="cb13-4"><a href=""></a>  <span class="fu">geom_hex</span>()</span>
+<span id="cb13-5"><a href=""></a></span>
+<span id="cb13-6"><a href=""></a><span class="fu">ggsave</span>(<span class="st">"diamonds.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>このスクリプトは何をするのでしょうか？</p>
 </section>
@@ -776,7 +777,7 @@
 </ul>
 <p>まずは、読み込んでから直接に中身を見てみましょう：</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
@@ -797,7 +798,7 @@
 <li><p>変数（オブジェクト）として保存する必要がある：</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href=""></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/students.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section class="slide level2">
@@ -820,7 +821,7 @@
 <li><p>中身を見たい時は<strong>変数名を直接コンソールに入力</strong>すればいい</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a>students</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   `Student ID` `Full Name`      favourite.food     mealPlan            AGE  
@@ -905,7 +906,7 @@
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3</code></pre>
 </div>
@@ -917,7 +918,7 @@
 <li>文字列（文字でできているベクトル）を作るときは、引用符をつけないといけない</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href=""></a><span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a" "b" "c"</code></pre>
 </div>
@@ -929,7 +930,7 @@
 <li><code>typeof()</code>関数でベクトルの型を確認することができる</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">typeof</span>(letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">typeof</span>(letters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -941,7 +942,7 @@
 <li>以下のコードでベクトルを作ると、そのベクトルの型は何でしょうか？</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="ベクトル変換" class="slide level2">
@@ -951,8 +952,8 @@
 <li><p>なので、入力が複数の型を含む場合、Rはそれを同じ型に合わせる</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"c"</span>)</span>
-<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"c"</span>)</span>
+<span id="cb26-2"><a href=""></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -985,7 +986,8 @@
 <section>
 <section id="データ解析" class="title-slide slide level1 center">
 <h1>データ解析</h1>
-
+<p>2024-05-16</p>
+<p><a href="https://joelnitta.github.io/cross-major-project-is2/" class="uri">https://joelnitta.github.io/cross-major-project-is2/</a></p>
 </section>
 <section id="生データ" class="slide level2">
 <h2>生データ</h2>
@@ -1009,6 +1011,9 @@
 <img data-src="https://r4ds.hadley.nz/images/tidy-1.png" class="r-stretch"></section>
 <section id="tidyなデータ-1" class="slide level2">
 <h2>tidyなデータ</h2>
+<ul>
+<li>前回に読み込んだ<code>students.csv</code>はtidyなデータ：</li>
+</ul>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
@@ -1034,14 +1039,15 @@
 <div class="code-with-filename-file">
 <pre><strong>roof-survey.R</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb29-2"><a href=""></a><span class="fu">library</span>(ggthemes) <span class="co"># プロットの色合いの設定に使う</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="データの読み込み-3" class="slide level2">
 <h2>データの読み込み</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">read_csv</span>(<span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">read_csv</span>(<span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 74 × 6
    ...1      ...2                      ...3                  ...4  ...5  ...6  
@@ -1059,229 +1065,31 @@
 # ℹ 64 more rows</code></pre>
 </div>
 </div>
-<p>うまく行かない・・</p>
+<p>うまく行かない（全然tidyじゃない）</p>
 </section>
-<section id="データの読み込み-4" class="slide level2">
-<h2>データの読み込み</h2>
+<section id="データクレンジング" class="slide level2">
+<h2>データクレンジング</h2>
 <ul>
-<li><code>read_csv()</code>関数の使い方を<code>?read_csv</code>で確認する
-<ul>
-<li><code>?read_csv</code>はデータ解析に必要ではないコマンドなので、<code>roof-survey.R</code>に書かないで、直接コンソール（下の方のパネル）に入力</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>?read_csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="データの読み込み-5" class="slide level2">
-<h2>データの読み込み</h2>
-<ul>
-<li><code>read_csv()</code>の主な引数（設定）
-<ul>
-<li><code>file</code>：読み込むファイル名（場所）</li>
-<li><code>skip</code>：データを読み込み始めるまで最初に<strong>読まない</strong>（スキップ）する行の数</li>
-<li><code>n_max</code>：何行まで読み込む</li>
-</ul></li>
-</ul>
-</section>
-<section id="データの読み込み-6" class="slide level2">
-<h2>データの読み込み</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">read_csv</span>(</span>
-<span id="cb33-2"><a href="#cb33-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb33-3"><a href="#cb33-3"></a>  <span class="at">skip =</span> <span class="dv">3</span>,</span>
-<span id="cb33-4"><a href="#cb33-4"></a>  <span class="at">n_max =</span> <span class="dv">22</span></span>
-<span id="cb33-5"><a href="#cb33-5"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 22 × 6
-   ...1  和名             ラテン名               被度  群度 個体数
-   &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;                 &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
- 1 A-1   ヘラオオバコ     Plantago lanceolata       2     2      7
- 2 A-1   マルバヤハズソウ Kummerowia stipulacea     5     5    120
- 3 A-1   ヒメジョオン     Erigeron annuus           1     1      1
- 4 A-1   &lt;NA&gt;             &lt;NA&gt;                     NA    NA     NA
- 5 A-1   &lt;NA&gt;             &lt;NA&gt;                     NA    NA     NA
- 6 A-2   ヘラオオバコ     Plantago lanceolata       1     1      4
- 7 A-2   マルバヤハズソウ Kummerowia stipulacea     5     4    150
- 8 A-2   ？               &lt;NA&gt;                      2     2      8
- 9 A-2   ？②              &lt;NA&gt;                      1     2     15
-10 A-2   &lt;NA&gt;             &lt;NA&gt;                     NA    NA     NA
-# ℹ 12 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="列名を指定する" class="slide level2">
-<h2>列名を指定する</h2>
-<ul>
-<li>列名は日本語のままだとコードでは扱いづらい
-<ul>
-<li>そもそも一列目は名前がない</li>
-</ul></li>
-<li>列名を指定しましょう</li>
+<li><p>生データを<strong>tidy</strong>（解析可能）なデータに整える必要があるけど、今は説明する時間がないので、私が用意したスクリプト（<code>.R</code>ファイル）を使う。</p></li>
+<li><p><code>data_cleaning.R</code>をダウンロードして、このプロジェクトに保存してください。</p></li>
+<li><p><code>data_cleaning.R</code>を開いて、実行すると、<code>data/okujo_2024.csv</code>が出力される</p></li>
+<li><p><code>data/okujo_2024.csv</code>を読み込む</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">read_csv</span>(</span>
-<span id="cb35-2"><a href="#cb35-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb35-3"><a href="#cb35-3"></a>  <span class="at">skip =</span> <span class="dv">3</span>,</span>
-<span id="cb35-4"><a href="#cb35-4"></a>  <span class="at">n_max =</span> <span class="dv">22</span>,</span>
-<span id="cb35-5"><a href="#cb35-5"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(</span>
-<span id="cb35-6"><a href="#cb35-6"></a>    <span class="st">"quadrat"</span>, <span class="st">"name_ja"</span>, <span class="st">"name_en"</span>,</span>
-<span id="cb35-7"><a href="#cb35-7"></a>    <span class="st">"cover"</span>, <span class="st">"abun"</span>, <span class="st">"pop"</span>)</span>
-<span id="cb35-8"><a href="#cb35-8"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 22 × 6
-   quadrat name_ja          name_en               cover abun  pop   
-   &lt;chr&gt;   &lt;chr&gt;            &lt;chr&gt;                 &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 &lt;NA&gt;    和名             ラテン名              被度  群度  個体数
- 2 A-1     ヘラオオバコ     Plantago lanceolata   2     2     7     
- 3 A-1     マルバヤハズソウ Kummerowia stipulacea 5     5     120   
- 4 A-1     ヒメジョオン     Erigeron annuus       1     1     1     
- 5 A-1     &lt;NA&gt;             &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 6 A-1     &lt;NA&gt;             &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 7 A-2     ヘラオオバコ     Plantago lanceolata   1     1     4     
- 8 A-2     マルバヤハズソウ Kummerowia stipulacea 5     4     150   
- 9 A-2     ？               &lt;NA&gt;                  2     2     8     
-10 A-2     ？②              &lt;NA&gt;                  1     2     15    
-# ℹ 12 more rows</code></pre>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>roof-survey.R</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb32-2"><a href=""></a><span class="fu">library</span>(ggthemes) <span class="co"># プロットの色合いの設定に使う</span></span>
+<span id="cb32-3"><a href=""></a></span>
+<span id="cb32-4"><a href=""></a>okujo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/okujo_2024.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</section>
-<section id="列名を指定する-1" class="slide level2">
-<h2>列名を指定する</h2>
-<ul>
-<li><p><code>quadrat</code>をもうちょっとよく見て下さい。どんなデータが入っている？</p></li>
-<li><p><code>A-1</code></p>
-<ul>
-<li><code>A</code>：プロット名</li>
-<li><code>1</code>: その中のクアドラット（quadrat）</li>
-</ul></li>
-<li><p>これをちゃんと分けましょう</p></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<ul>
-<li><code>separate_wider_delim()</code>を使う
-<ul>
-<li><code>separate</code>：分離させる</li>
-<li><code>wider</code>：より広く</li>
-<li><code>delim</code>：何かの記号を境目に</li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">read_csv</span>(</span>
-<span id="cb37-2"><a href="#cb37-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb37-3"><a href="#cb37-3"></a>  <span class="at">skip =</span> <span class="dv">4</span>,</span>
-<span id="cb37-4"><a href="#cb37-4"></a>  <span class="at">n_max =</span> <span class="dv">22</span>,</span>
-<span id="cb37-5"><a href="#cb37-5"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(</span>
-<span id="cb37-6"><a href="#cb37-6"></a>    <span class="st">"quadrat"</span>, <span class="st">"name_ja"</span>, <span class="st">"name_en"</span>,</span>
-<span id="cb37-7"><a href="#cb37-7"></a>    <span class="st">"cover"</span>, <span class="st">"abun"</span>, <span class="st">"pop"</span>)</span>
-<span id="cb37-8"><a href="#cb37-8"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb37-9"><a href="#cb37-9"></a>  <span class="fu">separate_wider_delim</span>(</span>
-<span id="cb37-10"><a href="#cb37-10"></a>    quadrat, <span class="at">delim =</span> <span class="st">"-"</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"plot"</span>, <span class="st">"quadrat"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 22 × 7
-   plot  quadrat name_ja          name_en               cover  abun   pop
-   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;            &lt;chr&gt;                 &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 A     1       ヘラオオバコ     Plantago lanceolata       2     2     7
- 2 A     1       マルバヤハズソウ Kummerowia stipulacea     5     5   120
- 3 A     1       ヒメジョオン     Erigeron annuus           1     1     1
- 4 A     1       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
- 5 A     1       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
- 6 A     2       ヘラオオバコ     Plantago lanceolata       1     1     4
- 7 A     2       マルバヤハズソウ Kummerowia stipulacea     5     4   150
- 8 A     2       ？               &lt;NA&gt;                      2     2     8
- 9 A     2       ？②              &lt;NA&gt;                      1     2    15
-10 A     2       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
-# ℹ 12 more rows</code></pre>
-</div>
-</div>
-</section>
-<section id="列名を指定する-2" class="slide level2">
-<h2>列名を指定する</h2>
-<ul>
-<li><p>これではまだ１区分しか読んでいない。他も同様に読み込む必要がある。</p></li>
-<li><p>自分で出来ますか？やってみて下さい。</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>okujo_a <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb39-2"><a href="#cb39-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb39-3"><a href="#cb39-3"></a>  <span class="at">skip =</span> <span class="dv">4</span>,</span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="at">n_max =</span> <span class="dv">22</span>,</span>
-<span id="cb39-5"><a href="#cb39-5"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(</span>
-<span id="cb39-6"><a href="#cb39-6"></a>    <span class="st">"quadrat"</span>, <span class="st">"name_ja"</span>, <span class="st">"name_en"</span>,</span>
-<span id="cb39-7"><a href="#cb39-7"></a>    <span class="st">"cover"</span>, <span class="st">"abun"</span>, <span class="st">"pop"</span>)</span>
-<span id="cb39-8"><a href="#cb39-8"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb39-9"><a href="#cb39-9"></a>  <span class="fu">separate_wider_delim</span>(</span>
-<span id="cb39-10"><a href="#cb39-10"></a>    quadrat, <span class="at">delim =</span> <span class="st">"-"</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"plot"</span>, <span class="st">"quadrat"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>okujo_b <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb40-2"><a href="#cb40-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb40-3"><a href="#cb40-3"></a>  <span class="at">skip =</span> <span class="dv">38</span>,</span>
-<span id="cb40-4"><a href="#cb40-4"></a>  <span class="at">n_max =</span> <span class="dv">16</span>,</span>
-<span id="cb40-5"><a href="#cb40-5"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(</span>
-<span id="cb40-6"><a href="#cb40-6"></a>    <span class="st">"quadrat"</span>, <span class="st">"name_ja"</span>, <span class="st">"name_en"</span>,</span>
-<span id="cb40-7"><a href="#cb40-7"></a>    <span class="st">"cover"</span>, <span class="st">"abun"</span>, <span class="st">"pop"</span>),</span>
-<span id="cb40-8"><a href="#cb40-8"></a>  <span class="at">col_types =</span> <span class="st">"cccnnn"</span></span>
-<span id="cb40-9"><a href="#cb40-9"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb40-10"><a href="#cb40-10"></a>  <span class="fu">separate_wider_delim</span>(</span>
-<span id="cb40-11"><a href="#cb40-11"></a>    quadrat, <span class="at">delim =</span> <span class="st">"-"</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"plot"</span>, <span class="st">"quadrat"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section class="slide level2">
-
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>okujo_c <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
-<span id="cb41-2"><a href="#cb41-2"></a>  <span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>,</span>
-<span id="cb41-3"><a href="#cb41-3"></a>  <span class="at">skip =</span> <span class="dv">59</span>,</span>
-<span id="cb41-4"><a href="#cb41-4"></a>  <span class="at">n_max =</span> <span class="dv">16</span>,</span>
-<span id="cb41-5"><a href="#cb41-5"></a>  <span class="at">col_names =</span> <span class="fu">c</span>(</span>
-<span id="cb41-6"><a href="#cb41-6"></a>    <span class="st">"quadrat"</span>, <span class="st">"name_ja"</span>, <span class="st">"name_en"</span>,</span>
-<span id="cb41-7"><a href="#cb41-7"></a>    <span class="st">"cover"</span>, <span class="st">"abun"</span>, <span class="st">"pop"</span>),</span>
-<span id="cb41-8"><a href="#cb41-8"></a>  <span class="at">col_types =</span> <span class="st">"cccnnn"</span></span>
-<span id="cb41-9"><a href="#cb41-9"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb41-10"><a href="#cb41-10"></a>  <span class="fu">separate_wider_delim</span>(</span>
-<span id="cb41-11"><a href="#cb41-11"></a>    quadrat, <span class="at">delim =</span> <span class="st">"-"</span>, <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"plot"</span>, <span class="st">"quadrat"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="データの整理" class="slide level2">
-<h2>データの整理</h2>
-<ul>
-<li>最後に、データを一つにまとめましょう
-<ul>
-<li>これで、やっと可視化（解析）できる段階に入った</li>
-</ul></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>okujo <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(okujo_a, okujo_b, okujo_c)</span>
-<span id="cb42-2"><a href="#cb42-2"></a>okujo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 54 × 7
-   plot  quadrat name_ja          name_en               cover  abun   pop
-   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;            &lt;chr&gt;                 &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 A     1       ヘラオオバコ     Plantago lanceolata       2     2     7
- 2 A     1       マルバヤハズソウ Kummerowia stipulacea     5     5   120
- 3 A     1       ヒメジョオン     Erigeron annuus           1     1     1
- 4 A     1       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
- 5 A     1       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
- 6 A     2       ヘラオオバコ     Plantago lanceolata       1     1     4
- 7 A     2       マルバヤハズソウ Kummerowia stipulacea     5     4   150
- 8 A     2       ？               &lt;NA&gt;                      2     2     8
- 9 A     2       ？②              &lt;NA&gt;                      1     2    15
-10 A     2       &lt;NA&gt;             &lt;NA&gt;                     NA    NA    NA
-# ℹ 44 more rows</code></pre>
-</div>
-</div>
+<p>これでデータの解析（可視化）ができる状態になった。</p>
 </section>
 <section id="ggplot2について" class="slide level2">
 <h2>ggplot2について</h2>
@@ -1328,15 +1136,19 @@
 <section id="目的このグラフを作る" class="slide level2">
 <h2>目的：このグラフを作る</h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="ggplotでグラフの基盤を作る" class="slide level2">
 <h2><code>ggplot()</code>でグラフの基盤を作る</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> okujo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> okujo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1345,16 +1157,20 @@
 <h2><code>mapping()</code>で座標を指定する</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb45-2"><a href="#cb45-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb45-3"><a href="#cb45-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb45-4"><a href="#cb45-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb45-5"><a href="#cb45-5"></a>    <span class="at">y =</span> cover</span>
-<span id="cb45-6"><a href="#cb45-6"></a>  )</span>
-<span id="cb45-7"><a href="#cb45-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb34-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb34-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb34-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb34-5"><a href=""></a>    <span class="at">y =</span> cover</span>
+<span id="cb34-6"><a href=""></a>  )</span>
+<span id="cb34-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1363,16 +1179,20 @@
 <h2><code>mapping()</code>で座標を指定する</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb46-2"><a href="#cb46-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb46-3"><a href="#cb46-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb46-4"><a href="#cb46-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb46-5"><a href="#cb46-5"></a>    <span class="at">y =</span> cover</span>
-<span id="cb46-6"><a href="#cb46-6"></a>  )</span>
-<span id="cb46-7"><a href="#cb46-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="3-6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb35-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb35-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb35-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb35-5"><a href=""></a>    <span class="at">y =</span> cover</span>
+<span id="cb35-6"><a href=""></a>  )</span>
+<span id="cb35-7"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1381,17 +1201,21 @@
 <h2><code>geom_()</code>でデータの形を指定する</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb47-2"><a href="#cb47-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb47-3"><a href="#cb47-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb47-4"><a href="#cb47-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb47-5"><a href="#cb47-5"></a>    <span class="at">y =</span> cover</span>
-<span id="cb47-6"><a href="#cb47-6"></a>  )</span>
-<span id="cb47-7"><a href="#cb47-7"></a>) <span class="sc">+</span></span>
-<span id="cb47-8"><a href="#cb47-8"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb36-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb36-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb36-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb36-5"><a href=""></a>    <span class="at">y =</span> cover</span>
+<span id="cb36-6"><a href=""></a>  )</span>
+<span id="cb36-7"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb36-8"><a href=""></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1400,17 +1224,21 @@
 <h2><code>geom_()</code>でデータの形を指定する</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb48-2"><a href="#cb48-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb48-3"><a href="#cb48-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb48-4"><a href="#cb48-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb48-5"><a href="#cb48-5"></a>    <span class="at">y =</span> cover</span>
-<span id="cb48-6"><a href="#cb48-6"></a>  )</span>
-<span id="cb48-7"><a href="#cb48-7"></a>) <span class="sc">+</span></span>
-<span id="cb48-8"><a href="#cb48-8"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb37-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb37-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb37-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb37-5"><a href=""></a>    <span class="at">y =</span> cover</span>
+<span id="cb37-6"><a href=""></a>  )</span>
+<span id="cb37-7"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb37-8"><a href=""></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1423,18 +1251,22 @@
 <h2><code>color</code>で色を潰す</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb49-2"><a href="#cb49-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb49-3"><a href="#cb49-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb49-4"><a href="#cb49-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb49-5"><a href="#cb49-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb49-6"><a href="#cb49-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb49-7"><a href="#cb49-7"></a>  )</span>
-<span id="cb49-8"><a href="#cb49-8"></a>) <span class="sc">+</span></span>
-<span id="cb49-9"><a href="#cb49-9"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb38-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb38-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb38-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb38-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb38-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb38-7"><a href=""></a>  )</span>
+<span id="cb38-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb38-9"><a href=""></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1443,18 +1275,22 @@
 <h2><code>color</code>で色を潰す</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb50-2"><a href="#cb50-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb50-3"><a href="#cb50-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb50-4"><a href="#cb50-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb50-5"><a href="#cb50-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb50-6"><a href="#cb50-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb50-7"><a href="#cb50-7"></a>  )</span>
-<span id="cb50-8"><a href="#cb50-8"></a>) <span class="sc">+</span></span>
-<span id="cb50-9"><a href="#cb50-9"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb39-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb39-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb39-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb39-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb39-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb39-7"><a href=""></a>  )</span>
+<span id="cb39-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb39-9"><a href=""></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1467,25 +1303,32 @@
 </section>
 <section id="平均だけでは足りない" class="slide level2">
 <h2>平均だけでは足りない</h2>
+<p><img data-src="https://www.research.autodesk.com/app/uploads/2023/03/AllDinos-2.png" height="500"></p>
 
-<img data-src="https://www.research.autodesk.com/app/uploads/2023/03/AllDinos-2.png" class="r-stretch"></section>
+<aside><div>
+<p><a href="https://www.research.autodesk.com/publications/same-stats-different-graphs/" class="uri">https://www.research.autodesk.com/publications/same-stats-different-graphs/</a></p>
+</div></aside></section>
 <section id="生データを付け加える" class="slide level2">
 <h2>生データを付け加える</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb51-2"><a href="#cb51-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb51-3"><a href="#cb51-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb51-4"><a href="#cb51-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb51-5"><a href="#cb51-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb51-6"><a href="#cb51-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb51-7"><a href="#cb51-7"></a>  )</span>
-<span id="cb51-8"><a href="#cb51-8"></a>) <span class="sc">+</span></span>
-<span id="cb51-9"><a href="#cb51-9"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb51-10"><a href="#cb51-10"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb40-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb40-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb40-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb40-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb40-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb40-7"><a href=""></a>  )</span>
+<span id="cb40-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb40-9"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb40-10"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1494,19 +1337,23 @@
 <h2>生データを付け加える</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb52-2"><a href="#cb52-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb52-3"><a href="#cb52-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb52-4"><a href="#cb52-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb52-5"><a href="#cb52-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb52-6"><a href="#cb52-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb52-7"><a href="#cb52-7"></a>  )</span>
-<span id="cb52-8"><a href="#cb52-8"></a>) <span class="sc">+</span></span>
-<span id="cb52-9"><a href="#cb52-9"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb52-10"><a href="#cb52-10"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb41-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb41-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb41-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb41-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb41-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb41-7"><a href=""></a>  )</span>
+<span id="cb41-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb41-9"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb41-10"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1518,7 +1365,7 @@
 <li><p>解決策：<strong>グループ内</strong>で適当にばらける</p>
 <ul>
 <li><code>geom_jitter()</code></li>
-<li><code>jitter</code> = 揺らぐ、ばらつく</li>
+<li><code>jitter</code> = 「揺らぐ」、「ばらつく」</li>
 </ul></li>
 </ul>
 </section>
@@ -1526,19 +1373,23 @@
 <h2>点が重なってしまう問題を<code>geom_jitter()</code>で解決</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb53-2"><a href="#cb53-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb53-3"><a href="#cb53-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb53-4"><a href="#cb53-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb53-5"><a href="#cb53-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb53-6"><a href="#cb53-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb53-7"><a href="#cb53-7"></a>  )</span>
-<span id="cb53-8"><a href="#cb53-8"></a>) <span class="sc">+</span></span>
-<span id="cb53-9"><a href="#cb53-9"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb53-10"><a href="#cb53-10"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb42-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb42-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb42-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb42-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb42-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb42-7"><a href=""></a>  )</span>
+<span id="cb42-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb42-9"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb42-10"><a href=""></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1547,24 +1398,278 @@
 <h2>点が重なってしまう問題を<code>geom_jitter()</code>で解決</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">ggplot</span>(</span>
-<span id="cb54-2"><a href="#cb54-2"></a>  <span class="at">data =</span> okujo,</span>
-<span id="cb54-3"><a href="#cb54-3"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
-<span id="cb54-4"><a href="#cb54-4"></a>    <span class="at">x =</span> plot,</span>
-<span id="cb54-5"><a href="#cb54-5"></a>    <span class="at">y =</span> cover,</span>
-<span id="cb54-6"><a href="#cb54-6"></a>    <span class="at">color =</span> plot</span>
-<span id="cb54-7"><a href="#cb54-7"></a>  )</span>
-<span id="cb54-8"><a href="#cb54-8"></a>) <span class="sc">+</span></span>
-<span id="cb54-9"><a href="#cb54-9"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb54-10"><a href="#cb54-10"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb43-2"><a href=""></a>  <span class="at">data =</span> okujo,</span>
+<span id="cb43-3"><a href=""></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
+<span id="cb43-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb43-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb43-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb43-7"><a href=""></a>  )</span>
+<span id="cb43-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb43-9"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb43-10"><a href=""></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="よりもコンパクトな書き方" class="slide level2">
+<h2>よりもコンパクトな書き方</h2>
+<p><code>data =</code>と<code>mapping =</code>を書かなくて良い</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb44-2"><a href=""></a>  okujo,</span>
+<span id="cb44-3"><a href=""></a>  <span class="fu">aes</span>(</span>
+<span id="cb44-4"><a href=""></a>    <span class="at">x =</span> plot,</span>
+<span id="cb44-5"><a href=""></a>    <span class="at">y =</span> cover,</span>
+<span id="cb44-6"><a href=""></a>    <span class="at">color =</span> plot</span>
+<span id="cb44-7"><a href=""></a>  )</span>
+<span id="cb44-8"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb44-9"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb44-10"><a href=""></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="labsでラベルをきれいにする" class="slide level2">
+<h2><code>labs()</code>でラベルをきれいにする</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb45-2"><a href=""></a>  okujo,</span>
+<span id="cb45-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb45-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb45-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb45-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb45-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb45-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb45-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb45-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb45-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb45-12"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="labsでラベルをきれいにする-1" class="slide level2">
+<h2><code>labs()</code>でラベルをきれいにする</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="7-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb46-2"><a href=""></a>  okujo,</span>
+<span id="cb46-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb46-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb46-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb46-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb46-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb46-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb46-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb46-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb46-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb46-12"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scale_で色を調整する" class="slide level2">
+<h2><code>scale_</code>で色を調整する</h2>
+<ul>
+<li>色覚異常の方に配慮したデザインを心がけよう</li>
+</ul>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb47-2"><a href=""></a>  okujo,</span>
+<span id="cb47-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb47-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb47-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb47-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb47-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb47-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb47-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb47-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb47-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb47-12"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb47-13"><a href=""></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="scale_で色を調整する-1" class="slide level2">
+<h2><code>scale_</code>で色を調整する</h2>
+<ul>
+<li>色覚異常の方に配慮したデザインを心がけよう</li>
+</ul>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb48-2"><a href=""></a>  okujo,</span>
+<span id="cb48-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb48-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb48-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb48-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb48-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb48-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb48-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb48-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb48-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb48-12"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb48-13"><a href=""></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="凡例を隠す" class="slide level2">
+<h2>凡例を隠す</h2>
+<ul>
+<li><p>プロットは文字と位置で分かるから、色の説明はいらない</p></li>
+<li><p><code>theme()</code>でグラフ全体の見た目（スタイル）を調整する</p></li>
+</ul>
+</section>
+<section id="themeで凡例を隠す" class="slide level2">
+<h2><code>theme()</code>で凡例を隠す</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb49-2"><a href=""></a>  okujo,</span>
+<span id="cb49-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb49-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb49-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb49-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb49-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb49-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb49-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb49-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb49-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb49-12"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb49-13"><a href=""></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb49-14"><a href=""></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="themeで凡例を隠す-1" class="slide level2">
+<h2><code>theme()</code>で凡例を隠す</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb50-2"><a href=""></a>  okujo,</span>
+<span id="cb50-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb50-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb50-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb50-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb50-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb50-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"Plant cover in roof-top green spaces"</span>,</span>
+<span id="cb50-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"Cover"</span>,</span>
+<span id="cb50-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"Plot"</span>,</span>
+<span id="cb50-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"Plot"</span></span>
+<span id="cb50-12"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb50-13"><a href=""></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb50-14"><a href=""></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
 <p><img data-src="index_files/figure-revealjs/unnamed-chunk-41-1.png" width="960"></p>
+</figure>
 </div>
 </div>
 </div>
+</div>
+</section></section>
+<section>
+<section id="できました" class="title-slide slide level1 center">
+<h1>できました！</h1>
+
+</section>
+<section id="おまけ①base_familyで文字化けを防ぐ" class="slide level2">
+<h2>おまけ①：<code>base_family</code>で文字化けを防ぐ</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href=""></a><span class="fu">ggplot</span>(</span>
+<span id="cb51-2"><a href=""></a>  okujo,</span>
+<span id="cb51-3"><a href=""></a>  <span class="fu">aes</span>(<span class="at">x =</span> plot,　<span class="at">y =</span> cover,　<span class="at">color =</span> plot)</span>
+<span id="cb51-4"><a href=""></a>) <span class="sc">+</span></span>
+<span id="cb51-5"><a href=""></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb51-6"><a href=""></a>  <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
+<span id="cb51-7"><a href=""></a>  <span class="fu">labs</span>(</span>
+<span id="cb51-8"><a href=""></a>    <span class="at">title =</span> <span class="st">"屋上緑地における植物の被度"</span>,</span>
+<span id="cb51-9"><a href=""></a>    <span class="at">y =</span> <span class="st">"被度"</span>,</span>
+<span id="cb51-10"><a href=""></a>    <span class="at">x =</span> <span class="st">"プロット"</span>,</span>
+<span id="cb51-11"><a href=""></a>    <span class="at">color =</span> <span class="st">"プロット"</span></span>
+<span id="cb51-12"><a href=""></a>  ) <span class="sc">+</span></span>
+<span id="cb51-13"><a href=""></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
+<span id="cb51-14"><a href=""></a>  <span class="fu">theme_gray</span>(<span class="at">base_family =</span> <span class="st">"HiraKakuPro-W3"</span>) <span class="sc">+</span></span>
+<span id="cb51-15"><a href=""></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-42-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="おまけ②ggsaveでグラフを保存する" class="slide level2">
+<h2>おまけ②：<code>ggsave()</code>でグラフを保存する</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href=""></a><span class="fu">ggsave</span>(<span class="st">"okujo.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section></section>
     </div>
@@ -1593,7 +1698,6 @@
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1892,10 +1996,9 @@
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1905,8 +2008,17 @@
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

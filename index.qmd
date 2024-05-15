@@ -11,7 +11,7 @@ execute:
 
 オンデマンド
 
-<https://joelnitta.github.io/cross-major-project-is2/>
+<https://joelnitta.github.io/cross-major-project-is2/#/データ解析>
 
 ## 再現性とは？
 
@@ -544,6 +544,10 @@ typeof(x)
 
 # データ解析
 
+2024-05-16
+
+<https://joelnitta.github.io/cross-major-project-is2/>
+
 ## 生データ
 
 - まず、グーグルドライブから`屋上はらっぱ植生調査.csv`（生データ）をダウンロードして、`data/`に置いて下さい
@@ -563,6 +567,8 @@ typeof(x)
 
 ## tidyなデータ
 
+- 前回に読み込んだ`students.csv`はtidyなデータ：
+
 ```{r}
 #| echo: false
 read_csv("data/students.csv")
@@ -578,6 +584,7 @@ read_csv("data/students.csv")
 #| eval: false
 #| filename: roof-survey.R
 library(tidyverse)
+library(ggthemes) # プロットの色合いの設定に使う
 ```
 
 ## データの読み込み
@@ -586,7 +593,30 @@ library(tidyverse)
 read_csv("data/屋上はらっぱ植生調査 - とりまとめ.csv")
 ```
 
-うまく行かない・・
+うまく行かない（全然tidyじゃない）
+
+## データクレンジング
+
+- 生データを**tidy**（解析可能）なデータに整える必要があるけど、今は説明する時間がないので、私が用意したスクリプト（`.R`ファイル）を使う。
+
+- `data_cleaning.R`をダウンロードして、このプロジェクトに保存してください。
+
+- `data_cleaning.R`を開いて、実行すると、`data/okujo_2024.csv`が出力される
+
+- `data/okujo_2024.csv`を読み込む
+
+---
+
+```{r}
+#| filename: roof-survey.R
+#| message: false
+library(tidyverse)
+library(ggthemes) # プロットの色合いの設定に使う
+
+okujo <- read_csv("data/okujo_2024.csv")
+```
+
+これでデータの解析（可視化）ができる状態になった。
 
 ## ggplot2について
 
@@ -650,6 +680,7 @@ ggplot(okujo, aes(x = plot, y = cover, color = plot)) +
     x = "Plot",
     color = "Plot"
   ) +
+  scale_color_colorblind() +
   theme(legend.position = "none")
 ```
 
@@ -757,7 +788,7 @@ ggplot(
 
 ## 平均だけでは足りない
 
-![](https://www.research.autodesk.com/app/uploads/2023/03/AllDinos-2.png)
+![](https://www.research.autodesk.com/app/uploads/2023/03/AllDinos-2.png){height=500}
 
 ::: {.aside}
 <https://www.research.autodesk.com/publications/same-stats-different-graphs/>
@@ -837,13 +868,33 @@ ggplot(
   geom_jitter()
 ```
 
+
+## よりもコンパクトな書き方
+
+`data = `と`mapping = `を書かなくて良い
+
+```{r}
+#| output-location: column
+ggplot(
+  okujo,
+  aes(
+    x = plot,
+    y = cover,
+    color = plot
+  )
+) +
+  geom_boxplot() +
+  geom_jitter()
+```
+
+
 ## `labs()`でラベルをきれいにする
 
 ```{r}
 #| output-location: column
 ggplot(
-  data = okujo,
-  mapping = aes(x = plot,　y = cover,　color = plot)
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
 ) +
   geom_boxplot() +
   geom_jitter() +
@@ -861,8 +912,8 @@ ggplot(
 #| output-location: column
 #| code-line-numbers: "7-12"
 ggplot(
-  data = okujo,
-  mapping = aes(x = plot,　y = cover,　color = plot)
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
 ) +
   geom_boxplot() +
   geom_jitter() +
@@ -872,4 +923,124 @@ ggplot(
     x = "Plot",
     color = "Plot"
   )
+```
+
+## `scale_`で色を調整する
+
+- 色覚異常の方に配慮したデザインを心がけよう
+
+```{r}
+#| output-location: column
+ggplot(
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  ) +
+  scale_color_colorblind()
+```
+
+## `scale_`で色を調整する
+
+- 色覚異常の方に配慮したデザインを心がけよう
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "13"
+ggplot(
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  ) +
+  scale_color_colorblind()
+```
+
+## 凡例を隠す
+
+- プロットは文字と位置で分かるから、色の説明はいらない
+
+- `theme()`でグラフ全体の見た目（スタイル）を調整する
+
+## `theme()`で凡例を隠す
+
+```{r}
+#| output-location: column
+ggplot(
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  ) +
+  scale_color_colorblind() +
+  theme(legend.position = "none")
+```
+
+## `theme()`で凡例を隠す
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "14"
+ggplot(
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "Plant cover in roof-top green spaces",
+    y = "Cover",
+    x = "Plot",
+    color = "Plot"
+  ) +
+  scale_color_colorblind() +
+  theme(legend.position = "none")
+```
+
+# できました！
+
+## おまけ①：`base_family`で文字化けを防ぐ
+
+```{r}
+#| output-location: column
+#| code-line-numbers: "15"
+ggplot(
+  okujo,
+  aes(x = plot,　y = cover,　color = plot)
+) +
+  geom_boxplot() +
+  geom_jitter() +
+  labs(
+    title = "屋上緑地における植物の被度",
+    y = "被度",
+    x = "プロット",
+    color = "プロット"
+  ) +
+  scale_color_colorblind() +
+  theme_gray(base_family = "HiraKakuPro-W3") +
+  theme(legend.position = "none")
+```
+
+## おまけ②：`ggsave()`でグラフを保存する
+
+```{r}
+ggsave("okujo.png")
 ```
