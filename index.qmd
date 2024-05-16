@@ -542,7 +542,7 @@ typeof(x)
 
 - **ベクトル**は一つの型しか持てない
 
-# データ解析
+# データの可視化
 
 2024-05-16
 
@@ -624,6 +624,17 @@ okujo <- read_csv("data/okujo_2024.csv")
 
 - `gg` = "**G**rammar of **G**raphics"（画像の文法）
   - 「文法」が分かれば、（ほとんど）<br>どんな図でも作れる
+
+## 参考情報
+
+- [ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/)
+
+- [Tokyo Rのスラック](https://github.com/tokyor/r-wakalang)
+
+- chatGPT（相当なトレーニングデータがあるはず）
+  - でも何も知らないでは上手く行かない
+
+![](../images/slack.png)
 
 ## ggplot2について
 
