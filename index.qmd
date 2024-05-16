@@ -1009,7 +1009,7 @@ ggplot(
 
 ```{r}
 #| output-location: column
-#| code-line-numbers: "14"
+#| code-line-numbers: "13"
 ggplot(
   okujo,
   aes(x = plot,　y = cover,　color = plot)
