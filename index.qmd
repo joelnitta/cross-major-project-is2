@@ -1053,5 +1053,6 @@ ggplot(
 ## おまけ②：`ggsave()`でグラフを保存する
 
 ```{r}
+#| eval: false
 ggsave("okujo.png")
 ```
