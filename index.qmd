@@ -11,7 +11,7 @@ execute:
 
 オンデマンド
 
-<https://joelnitta.github.io/cross-major-project-is2/#/データ解析>
+<https://joelnitta.github.io/cross-major-project-is2/>
 
 ## 再現性とは？
 
@@ -323,7 +323,7 @@ ggplot(diamonds, aes(x = carat, y = price)) +
 
 スクリプトに間違いが入っている場合、RStudioはそれを教えてくれる（バツマークと赤い線）：
 
-![](https://green-roof.hadley.nz/screenshots/rstudio-diagnostic.png){height="200"}
+![](https://docs.posit.co/ide/user/ide/guide/code/images/error-missing-comma.png){height="200"}
 
 ## プロジェクトにスクリプトを置きましょう
 
