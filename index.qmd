@@ -544,8 +544,6 @@ typeof(x)
 
 # データの可視化
 
-2024-05-16
-
 <https://joelnitta.github.io/cross-major-project-is2/>
 
 ## 生データ
