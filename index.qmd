@@ -548,7 +548,7 @@ typeof(x)
 
 ## 生データ
 
-- まず、グーグルドライブから`屋上はらっぱ植生調査.csv`（生データ）をダウンロードして、`data/`に置いて下さい
+- [グーグルドライブ](https://docs.google.com/spreadsheets/d/1gjJJ3PdTS4EbhaEjm1Ir1M6c2j8KNTug/edit?usp=sharing&ouid=111421972632677423000&rtpof=true&sd=true)から「2025とりまとめ」データを`屋上はらっぱ植生調査 - 2025 とりまとめ.csv`としてダウンロードして、`data/`に置いて下さい（生データ）
 
 - 「生データ」とは収集された元のデータであり、**読み込み専用**で扱う。
   - データの整合性を保持し、誤改変を防ぐためである。
@@ -588,7 +588,7 @@ library(ggthemes) # プロットの色合いの設定に使う
 ## データの読み込み
 
 ```{r}
-read_csv("data/屋上はらっぱ植生調査 - とりまとめ.csv")
+read_csv("data/屋上はらっぱ植生調査 - 2025 とりまとめ.csv")
 ```
 
 うまく行かない（全然tidyじゃない）
@@ -597,17 +597,29 @@ read_csv("data/屋上はらっぱ植生調査 - とりまとめ.csv")
 
 - 生データを**tidy**（解析可能）なデータに整える必要があるけど、今は説明する時間がないので、私が用意したスクリプト（`.R`ファイル）を使う。
 
-- `data_cleaning.R`をダウンロードして、このプロジェクトに保存してください。
+- `data_cleaning_2025.R`を[ダウンロード](https://drive.google.com/file/d/1ORpHZd1ksqTWkcDec9OtNj6cz13sY2in/view?usp=drive_link)して、このプロジェクトに保存してください。
 
-- `data_cleaning.R`を開いて、実行すると、`data/okujo_2024.csv`が出力される
+- `data_cleaning_2025.R`を開いて、実行すると、`data/okujo_2025.csv`が出力される
 
-- `data/okujo_2024.csv`を読み込む
+- `data/okujo_2025.csv`を読み込む
 
 ---
 
 ```{r}
 #| filename: roof-survey.R
 #| message: false
+#| eval: false
+library(tidyverse)
+library(ggthemes) # プロットの色合いの設定に使う
+
+okujo <- read_csv("data/okujo_2025.csv")
+```
+
+```{r}
+#| filename: roof-survey.R
+#| message: false
+#| eval: true
+#| echo: false
 library(tidyverse)
 library(ggthemes) # プロットの色合いの設定に使う
 

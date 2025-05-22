@@ -789,7 +789,7 @@
 <section id="生データ" class="slide level2">
 <h2>生データ</h2>
 <ul>
-<li><p>まず、グーグルドライブから<code>屋上はらっぱ植生調査.csv</code>（生データ）をダウンロードして、<code>data/</code>に置いて下さい</p></li>
+<li><p><a href="https://docs.google.com/spreadsheets/d/1gjJJ3PdTS4EbhaEjm1Ir1M6c2j8KNTug/edit?usp=sharing&amp;ouid=111421972632677423000&amp;rtpof=true&amp;sd=true">グーグルドライブ</a>から「2025とりまとめ」データを<code>屋上はらっぱ植生調査 - 2025 とりまとめ.csv</code>としてダウンロードして、<code>data/</code>に置いて下さい（生データ）</p></li>
 <li><p>「生データ」とは収集された元のデータであり、<strong>読み込み専用</strong>で扱う。</p>
 <ul>
 <li>データの整合性を保持し、誤改変を防ぐためである。</li>
@@ -844,22 +844,22 @@
 <section id="データの読み込み-3" class="slide level2">
 <h2>データの読み込み</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">read_csv</span>(<span class="st">"data/屋上はらっぱ植生調査 - とりまとめ.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">read_csv</span>(<span class="st">"data/屋上はらっぱ植生調査 - 2025 とりまとめ.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 74 × 6
-   ...1      ...2                      ...3                  ...4  ...5  ...6  
-   &lt;chr&gt;     &lt;chr&gt;                     &lt;chr&gt;                 &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
- 1 &lt;NA&gt;      &lt;NA&gt;                      &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 2 2024/4/25 22Z1029X 21Z1007C 22Z1034 &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 3 &lt;NA&gt;      和名                      ラテン名              被度  群度  個体数
- 4 A-1       ヘラオオバコ              Plantago lanceolata   2     2     7     
- 5 A-1       マルバヤハズソウ          Kummerowia stipulacea 5     5     120   
- 6 A-1       ヒメジョオン              Erigeron annuus       1     1     1     
- 7 A-1       &lt;NA&gt;                      &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 8 A-1       &lt;NA&gt;                      &lt;NA&gt;                  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
- 9 A-2       ヘラオオバコ              Plantago lanceolata   1     1     4     
-10 A-2       マルバヤハズソウ          Kummerowia stipulacea 5     4     150   
-# ℹ 64 more rows</code></pre>
+<pre><code># A tibble: 76 × 6
+   A区画区画       `大野、中野` ...3     ...4  ...5  ...6  
+   &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 2025/4/17       &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 2 区画（A-1など） 和名         ラテン名 被度  群度  個体数
+ 3 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 4 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 5 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 6 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 7 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 8 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+ 9 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+10 &lt;NA&gt;            &lt;NA&gt;         &lt;NA&gt;     &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;  
+# ℹ 66 more rows</code></pre>
 </div>
 </div>
 <p>うまく行かない（全然tidyじゃない）</p>
@@ -868,9 +868,9 @@
 <h2>データクレンジング</h2>
 <ul>
 <li><p>生データを<strong>tidy</strong>（解析可能）なデータに整える必要があるけど、今は説明する時間がないので、私が用意したスクリプト（<code>.R</code>ファイル）を使う。</p></li>
-<li><p><code>data_cleaning.R</code>をダウンロードして、このプロジェクトに保存してください。</p></li>
-<li><p><code>data_cleaning.R</code>を開いて、実行すると、<code>data/okujo_2024.csv</code>が出力される</p></li>
-<li><p><code>data/okujo_2024.csv</code>を読み込む</p></li>
+<li><p><code>data_cleaning_2025.R</code>を<a href="https://drive.google.com/file/d/1ORpHZd1ksqTWkcDec9OtNj6cz13sY2in/view?usp=drive_link">ダウンロード</a>して、このプロジェクトに保存してください。</p></li>
+<li><p><code>data_cleaning_2025.R</code>を開いて、実行すると、<code>data/okujo_2025.csv</code>が出力される</p></li>
+<li><p><code>data/okujo_2025.csv</code>を読み込む</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -883,7 +883,7 @@
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb32-2"><a href=""></a><span class="fu">library</span>(ggthemes) <span class="co"># プロットの色合いの設定に使う</span></span>
 <span id="cb32-3"><a href=""></a></span>
-<span id="cb32-4"><a href=""></a>okujo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/okujo_2024.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-4"><a href=""></a>okujo <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/okujo_2025.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p>これでデータの解析（可視化）ができる状態になった。</p>
@@ -944,7 +944,7 @@
 <section id="目的このグラフを作る" class="slide level2">
 <h2>目的：このグラフを作る</h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
 <section id="ggplotでグラフの基盤を作る" class="slide level2">
 <h2><code>ggplot()</code>でグラフの基盤を作る</h2>
 <div class="cell columns column-output-location">
@@ -954,7 +954,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -975,7 +975,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -996,7 +996,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1018,7 +1018,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1040,7 +1040,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1067,7 +1067,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1090,7 +1090,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1127,7 +1127,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1151,7 +1151,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1186,7 +1186,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1210,7 +1210,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1235,7 +1235,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1261,7 +1261,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1287,7 +1287,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1317,7 +1317,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1347,7 +1347,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1382,7 +1382,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1410,7 +1410,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -1444,7 +1444,7 @@
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="index_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-41-1.png" width="960"></p>
 </figure>
 </div>
 </div>
