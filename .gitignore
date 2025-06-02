@@ -1,3 +1,6 @@
 data
 working
 .DS_Store
+.Rproj.user
+.Rhistory
+*.Rproj
