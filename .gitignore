@@ -4,3 +4,5 @@ working
 .Rproj.user
 .Rhistory
 *.Rproj
+*_files
+*.html

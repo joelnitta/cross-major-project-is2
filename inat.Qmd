@@ -1,0 +1,156 @@
+---
+title: "Temporal Patterns in iNaturalist Observations at Chiba University"
+format:
+  html:
+    code-fold: true
+    code-tools: false
+    echo: false
+execute:
+  warning: false
+  message: false
+---
+
+# Introduction
+
+This report explores temporal patterns in iNaturalist observations from the Chiba University Nishi-Chiba Campus. In particular, we examine whether different major taxonomic groups (“iconic taxa”) tend to be observed at different times of day.
+
+# Load Packages and Download Data
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(rinat)
+
+nishi_chiba_obs <- get_inat_obs(
+  place_id = "chiba-university-nishi-chiba-campus",
+  maxresults = 10000
+) |>
+  as_tibble()
+```
+
+# Filter Rare Taxa
+
+To simplify the analysis, iconic taxa representing less than 5% of total observations were excluded.
+
+```{r}
+common_taxa <- nishi_chiba_obs |>
+  count(iconic_taxon_name) |>
+  mutate(prop = n / sum(n)) |>
+  filter(prop >= 0.05) |>
+  pull(iconic_taxon_name)
+
+filtered_obs <- nishi_chiba_obs |>
+  filter(iconic_taxon_name %in% common_taxa)
+
+filtered_obs |>
+  count(iconic_taxon_name, sort = TRUE) |>
+  mutate(
+    percent = round(n / sum(n) * 100, 1)
+  ) |>
+  knitr::kable(
+    col.names = c(
+      "Iconic taxon",
+      "Number of observations",
+      "Percent"
+    )
+  )
+```
+
+# Temporal Distribution of Observations
+
+The following figure shows the percentage of observations occurring during each hour of the day for each iconic taxon. Percentages are calculated separately within each taxon so that differences in total observation numbers do not dominate the visualization.
+
+Hours between 20:00 and 06:00 were excluded because there were essentially no observations during nighttime hours.
+
+```{r}
+hourly_plot_data <- filtered_obs |>
+  mutate(
+    datetime = with_tz(ymd_hms(datetime), tzone = "Asia/Tokyo"),
+    date = as_date(datetime),
+    hour = hour(datetime)
+  ) |>
+  filter(hour >= 6, hour < 20) |>
+  count(date, hour, iconic_taxon_name) |>
+  complete(
+    date,
+    hour = 6:19,
+    iconic_taxon_name,
+    fill = list(n = 0)
+  ) |>
+  group_by(hour, iconic_taxon_name) |>
+  summarize(
+    mean_obs = mean(n),
+    .groups = "drop"
+  ) |>
+  group_by(iconic_taxon_name) |>
+  mutate(
+    percent = mean_obs / sum(mean_obs) * 100
+  )
+
+ggplot(
+  hourly_plot_data,
+  aes(hour, percent, color = iconic_taxon_name)
+) +
+  geom_line(linewidth = 1) +
+  geom_point() +
+  scale_x_continuous(breaks = 6:19) +
+  labs(
+    x = "Hour of day (Japan time)",
+    y = "Percent of observations",
+    color = "Iconic taxon"
+  ) +
+  theme_minimal()
+```
+
+# Statistical Test
+
+To test whether observation time differs among iconic taxa, we performed a chi-squared test of independence.
+
+```{r}
+obs_table <- filtered_obs |>
+  mutate(
+    datetime = with_tz(ymd_hms(datetime), tzone = "Asia/Tokyo"),
+    hour = hour(datetime)
+  ) |>
+  filter(hour >= 6, hour < 20) |>
+  count(iconic_taxon_name, hour) |>
+  pivot_wider(
+    names_from = hour,
+    values_from = n,
+    values_fill = 0
+  )
+
+mat <- obs_table |>
+  column_to_rownames("iconic_taxon_name") |>
+  as.matrix()
+
+chi_result <- chisq.test(mat)
+
+chi_result
+```
+
+# Standardized Residuals
+
+Standardized residuals help identify which taxa are observed more or less frequently than expected at different times of day.
+
+Positive values indicate more observations than expected, while negative values indicate fewer observations than expected.
+
+```{r}
+chi_result$stdres |>
+  as.data.frame() |>
+  rownames_to_column("iconic_taxon_name") |>
+  knitr::kable(digits = 2)
+```
+
+# Conclusions
+
+This analysis suggests that different iconic taxa may show somewhat different temporal observation patterns. However, these patterns likely reflect a combination of biological activity and observer behavior.
+
+Potential influences include:
+
+- Human activity patterns on campus
+- Ease of observing different organisms at different times
+- Taxon-specific detectability
+- Observer specialization
+
+Because iNaturalist data are citizen-science observations rather than systematic surveys, interpretation should consider possible sampling biases.
